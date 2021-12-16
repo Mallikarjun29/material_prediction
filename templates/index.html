@@ -17,9 +17,9 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="number" name="Density" placeholder="Density" required="required" step="any"/>
-        <input type="number" name="Elasticity" placeholder="Elasticity" required="required" step="any"/>
-		<input type="number" name="Strength" placeholder="Strength" required="required" step="any"/>
+    	<input type="number" name="Density" placeholder="Density in g/cm^3" required="required" step="any"/>
+        <input type="number" name="Elasticity" placeholder="Elasticity in GPa" required="required" step="any"/>
+		<input type="number" name="Strength" placeholder="Strength in MPa" required="required" step="any"/>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
