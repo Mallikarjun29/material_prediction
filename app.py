@@ -18,11 +18,11 @@ def predict():
     int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
-    if(prediction[1]==2):
+    if(prediction[0]==2):
         output='Polymer'
-    elif(prediction[1]==1):
+    elif(prediction[0]==1):
         output='Metal'
-    elif(prediction[1]==0):
+    elif(prediction[0]==0):
         output='Ceramic'
 
     return render_template('index.html', prediction_text='The material is {}'.format(output))
